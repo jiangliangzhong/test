@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.List;
+
 /**
  * 车类
  * */
@@ -15,6 +17,8 @@ public class Car {
     private int planTime;
     /**等待状态(0)还是终止状态(1)，*/
     private int state;
+    /**车的路径*/
+    private List<CarPath> carPathList;
     public Car(int id, int from, int to, int speed, int planTime) {
         this.id = id;
         this.from = from;
@@ -24,6 +28,14 @@ public class Car {
     }
 
     public Car() {
+    }
+
+    public List<CarPath> getCarPathList() {
+        return carPathList;
+    }
+
+    public void setCarPathList(List<CarPath> carPathList) {
+        this.carPathList = carPathList;
     }
 
     public int getState() {

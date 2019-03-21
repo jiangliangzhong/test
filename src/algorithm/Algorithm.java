@@ -30,5 +30,7 @@ public class Algorithm {
 
     }
     /**调度每个路口*/
-    public void 
+    public void scheduleCross(){
+
+    }
 }
