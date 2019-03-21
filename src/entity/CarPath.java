@@ -9,6 +9,10 @@ public class CarPath {
     public CarPath() {
     }
 
+    public CarPath(Road road) {
+        this.road = road;
+    }
+
     public CarPath(Road road, Cross fromCross, Cross toCross) {
         this.road = road;
         this.fromCross = fromCross;
