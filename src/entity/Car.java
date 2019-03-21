@@ -19,12 +19,33 @@ public class Car {
     private int state;
     /**车的路径*/
     private List<CarPath> carPathList;
+    /**当前在哪条路上, 对应路线的索引*/
+    private int curLoad;
+    /***该车的行经状态：0:，未出发，1.已经出发，2.已经到达*/
+    private int carRouteState;
     public Car(int id, int from, int to, int speed, int planTime) {
         this.id = id;
         this.from = from;
         this.to = to;
         this.speed = speed;
         this.planTime = planTime;
+        this.carRouteState = 0;
+    }
+
+    public int getCurLoad() {
+        return curLoad;
+    }
+
+    public void setCurLoad(int curLoad) {
+        this.curLoad = curLoad;
+    }
+
+    public int getCarRouteState() {
+        return carRouteState;
+    }
+
+    public void setCarRouteState(int carRouteState) {
+        this.carRouteState = carRouteState;
     }
 
     public Car() {

@@ -36,7 +36,7 @@ public class ReadDataUtils {
         List<String> carStrList = this.getLines(filePath);
         // 对ArrayList中存储的字符串进行处理
         int length = carStrList.size();
-        Car[] cars = new Car[length];
+        Car[] cars = new Car[length-1];
         for(int i=1;i<length;i++){
             String carStr = carStrList.get(i);
             carStr = carStr.replace("(","");
@@ -54,7 +54,7 @@ public class ReadDataUtils {
         List<String> roadStrList = this.getLines(filePath);
         // 对ArrayList中存储的字符串进行处理
         int length = roadStrList.size();
-        Road[] roads = new Road[length];
+        Road[] roads = new Road[length-1];
         for(int i=1;i<length;i++){
             String carStr = roadStrList.get(i);
             carStr = carStr.replace("(","");
