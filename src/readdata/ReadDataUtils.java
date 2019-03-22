@@ -63,6 +63,7 @@ public class ReadDataUtils {
             String[] strings = carStr.split(",");
             Road road = new Road(Integer.valueOf(strings[0]),Integer.valueOf(strings[1]),Integer.valueOf(strings[2]),
                     Integer.valueOf(strings[3]),Integer.valueOf(strings[4]),Integer.valueOf(strings[5]),Integer.valueOf(strings[6]));
+            road.setDiff(Math.abs(road.getTo() - road.getFrom()));
             roads[i-1] = road;
         }
         return roads;
