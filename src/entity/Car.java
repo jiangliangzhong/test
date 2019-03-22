@@ -23,6 +23,8 @@ public class Car {
     private int curLoad;
     /***该车的行经状态：0:，未出发，1.已经出发，2.已经到达*/
     private int carRouteState;
+    /**真正开始出发的时间*/
+    private int startTime;
     public Car(int id, int from, int to, int speed, int planTime) {
         this.id = id;
         this.from = from;
@@ -30,6 +32,14 @@ public class Car {
         this.speed = speed;
         this.planTime = planTime;
         this.carRouteState = 0;
+    }
+
+    public int getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(int startTime) {
+        this.startTime = startTime;
     }
 
     public int getCurLoad() {
