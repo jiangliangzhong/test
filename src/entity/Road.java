@@ -17,6 +17,8 @@ public class Road {
     private int isDuplex;
     /**性能评估*/
     private float performance;
+    /**to-from差值*/
+    private int diff;
     /**车道上每处的信息,看是否有车和车的信息*/
     private Car[][] posCarInfos;
     public Road(int id, int lenght, int speed, int channel, int from, int to, int isDuplex) {
@@ -33,6 +35,14 @@ public class Road {
             h = h * 2;
         }
         posCarInfos = new Car[h][l];
+    }
+
+    public int getDiff() {
+        return diff;
+    }
+
+    public void setDiff(int diff) {
+        this.diff = diff;
     }
 
     public float getPerformance() {
