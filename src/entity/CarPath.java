@@ -1,30 +1,32 @@
 package entity;
 
+import java.util.List;
+
 /**描述车需要走的路径*/
 public class CarPath {
-    private Road road;
+    private List<Road> roads;
     private Cross fromCross;
     private Cross toCross;
 
     public CarPath() {
     }
 
-    public CarPath(Road road) {
-        this.road = road;
+    public CarPath(List<Road> roads) {
+        this.roads = roads;
     }
 
-    public CarPath(Road road, Cross fromCross, Cross toCross) {
-        this.road = road;
+    public CarPath(List<Road> roads, Cross fromCross, Cross toCross) {
+        this.roads = roads;
         this.fromCross = fromCross;
         this.toCross = toCross;
     }
 
-    public Road getRoad() {
-        return road;
+    public List<Road> getRoads() {
+        return roads;
     }
 
-    public void setRoad(Road road) {
-        this.road = road;
+    public void setRoads(List<Road> roads) {
+        this.roads = roads;
     }
 
     public Cross getFromCross() {
