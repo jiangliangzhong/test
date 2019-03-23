@@ -39,10 +39,11 @@ public class AlgorithmSub {
             for(Car car:cars){
                 List<CarPath> carPathList = car.getCarPathList();
                 StringBuilder answer = new StringBuilder();
+
                 answer.append(car.getId()+",");
                 answer.append(car.getStartTime());
                 for(CarPath carPath:carPathList){
-                    answer.append(","+carPath.getRoad());
+//                    answer.append(","+carPath.getRoad());
                 }
                 bw.write(answer.toString()+"\t\n");
             }
